@@ -38,19 +38,19 @@ end
   end
 
   @doc """
-  Pushes data to the right in the given `portal`.
+  Pushes data to the from `from_door` to `to_door` in the given `portal`.
   """
-  def push_right(portal) do
-    # See if we can pop data from left. If so, push the
-    # popped data to the right. Otherwise, do nothing.
-    case Portal.Door.pop(portal.left) do
+  def push(portal, from_door, to_door) do
+    # See if we can pop data from `from_door`. If so, push the
+    # popped data to the other door. Otherwiese, do nothing.
+    case Portal.Door.pop(from_door) do
       :error   -> :ok
-      {:ok, h} -> Portal.Door.push(portal.right, h)
+      {:ok, h} -> Portal.Door.push(to_door, h)
     end
-
-    # Let's return the portal itself
     portal
   end
+
+
 end
 
 
