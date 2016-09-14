@@ -1,6 +1,6 @@
 # Portal
 
-[Exercise source]http://howistart.org/posts/elixir/1
+[Exercise source](http://howistart.org/posts/elixir/1)
 
 Portal is a game that consists of a series of puzzles that must be solved by teleporting the player's character and simple objects from one place to another.
 
